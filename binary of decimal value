@@ -1,0 +1,22 @@
+//print binary of decimal value using recursion
+
+
+#include<stdio.h>
+void dec(int);
+void main()
+{
+int n,i,j;
+printf("\nenter the number\n");
+scanf("%d",&n);
+printf("\n");
+dec(n);
+}
+void dec(int n)
+{
+ 
+static int i=31;
+printf("%d",n>>i&1);
+i--;
+if(i>=0)
+dec(n);
+}
